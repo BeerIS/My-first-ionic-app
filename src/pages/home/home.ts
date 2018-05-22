@@ -11,4 +11,11 @@ export class HomePage {
 
   }
 
+  signIn()
+  {
+    alert("Signed in jaaaaa");
+  }
+
+
+
 }
