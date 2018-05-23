@@ -1,7 +1,8 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      สวัสดีจ้าาาาา
+      <!-- ตัวนี้ชื่อว่า Interpolation -->
+      สวัสดีจ้า {{ username }}
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -9,14 +10,15 @@
 <ion-content padding>
   
       <ion-item>
-        <ion-label>Username</ion-label>
-        <ion-input type="text" ></ion-input>
+        <ion-label floating>Username</ion-label>
+        <ion-input type="text" [(ngModel)]="username"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label>Password</ion-label>
-        <ion-input type="password" ></ion-input>
+        <ion-label floating>Password</ion-label>
+        <ion-input type="password" [(ngModel)]="password"></ion-input>
       </ion-item>
 
-  <button ion-button block (click)="signIn()">ลงชื่อเข้าใช้</button>
-  <button ion-button block outline>ล้างข้อมูล</button>
+  <button ion-button block (click)="signIn(username,password)">ลงชื่อเข้าใช้</button>
+  <button ion-button block outline (click)="clearForm()">ล้างข้อมูล</button>
+  {{msg}}
 </ion-content>
